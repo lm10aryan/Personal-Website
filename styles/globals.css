@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-cream text-charcoal font-sans antialiased;
+  }
+  
+  ::selection {
+    @apply bg-accent/20;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-6xl mx-auto px-6 lg:px-12;
+  }
+  
+  .prose-custom {
+    @apply max-w-prose mx-auto;
+  }
+  
+  .section-padding {
+    @apply py-20 lg:py-32;
+  }
+}

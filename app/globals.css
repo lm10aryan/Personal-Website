@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors - Neobrutalist with agricultural homage */
+  --color-cream: #FAF5F0;
+  --color-watermelon: #E85A4F;
+  --color-mango: #F4A261;
+  --color-lime: #2A9D8F;
+  --color-charcoal: #1A1A1A;
+  --color-black: #000000;
+
+  /* Typography */
+  --font-heading: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+  --font-accent: var(--font-caveat), cursive;
+
+  /* Shadows */
+  --shadow-default: 4px 4px 0 var(--color-black);
+  --shadow-hover: 6px 6px 0 var(--color-black);
+  --shadow-text: 2px 2px 0 var(--color-black);
+
+  /* Border */
+  --border-width: 3px;
+  --border-default: var(--border-width) solid var(--color-black);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: var(--shadow-text);
+  letter-spacing: -0.02em;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-mango);
+  color: var(--color-charcoal);
+}
+
+/* Utility Classes */
+@layer utilities {
+  .text-shadow-brutal {
+    text-shadow: 2px 2px 0 var(--color-black);
+  }
+
+  .shadow-brutal {
+    box-shadow: 4px 4px 0 var(--color-black);
+  }
+
+  .shadow-brutal-hover {
+    box-shadow: 6px 6px 0 var(--color-black);
+  }
+
+  .border-brutal {
+    border: 3px solid var(--color-black);
+  }
+
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .font-accent {
+    font-family: var(--font-accent);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-charcoal);
+  border: 2px solid var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-watermelon);
+}

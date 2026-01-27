@@ -7,24 +7,35 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        cream: '#FAFAF8',
-        charcoal: '#1A1A1A',
-        warmgray: '#4A4A4A',
-        accent: '#D4734F',
+        // Retro Design System
+        cream: '#FFF8E7',
+        black: '#000000',
+        // Accents (muted/desaturated)
+        sage: '#9FB5A5',      // Agriculture
+        peach: '#FF9B71',     // Tech warmth
+        teal: '#6BB4A8',      // AI/water
+        pink: '#E8B4D9',      // Vitality
       },
       fontFamily: {
-        serif: ['Crimson Pro', 'Georgia', 'serif'],
-        sans: ['Work Sans', 'system-ui', 'sans-serif'],
+        mono: ['Space Mono', 'monospace'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'display': ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'h1': ['3rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
-        'h2': ['2rem', { lineHeight: '1.3' }],
-        'h3': ['1.5rem', { lineHeight: '1.4' }],
-        'body': ['1.125rem', { lineHeight: '1.7' }],
+        'hero': ['64px', { lineHeight: '1.2', fontWeight: '700' }],
+        'h1': ['40px', { lineHeight: '1.2', fontWeight: '700' }],
+        'h2': ['28px', { lineHeight: '1.2', fontWeight: '700' }],
+        'body': ['18px', { lineHeight: '1.6' }],
+        'small': ['16px', { lineHeight: '1.6' }],
       },
-      maxWidth: {
-        'prose': '65ch',
+      boxShadow: {
+        'retro': '8px 8px 0 #000000',
+        'retro-sm': '6px 6px 0 #000000',
+        'retro-hover': '10px 10px 0 #000000',
+      },
+      borderWidth: {
+        '6': '6px',
+        '5': '5px',
+        '4': '4px',
       },
     },
   },

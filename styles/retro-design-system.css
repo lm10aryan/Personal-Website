@@ -1,20 +1,33 @@
 /* Retro Design System - aryanthepade.com */
+/* Warm, playful 80s/90s aesthetic */
 
 :root {
-  /* Base */
-  --bg-cream: #FFF8E7;
-  --text-black: #000000;
+  /* Base - Softer background */
+  --bg-cream: #FDF6EC;
+  --bg-lavender: #F0E6FA;
+  --text-black: #1a1a2e;
 
-  /* Accents (all muted/desaturated) */
-  --sage-green: #9FB5A5;    /* Agriculture */
-  --peach-orange: #FF9B71;   /* Tech warmth */
-  --soft-teal: #6BB4A8;      /* AI/water */
-  --dusty-pink: #E8B4D9;     /* Vitality */
+  /* Warm Retro Palette */
+  --retro-coral: #FF6B6B;      /* Warm red-coral */
+  --retro-peach: #FFB347;      /* Sunny peach-orange */
+  --retro-yellow: #FFE66D;     /* Bright yellow */
+  --retro-mint: #88D8B0;       /* Fresh mint green */
+  --retro-teal: #4ECDC4;       /* Vibrant teal */
+  --retro-purple: #C3B1E1;     /* Soft lavender purple */
+  --retro-pink: #FF9FF3;       /* Playful pink */
+  --retro-blue: #74B9FF;       /* Sky blue */
+
+  /* Legacy aliases for compatibility */
+  --sage-green: var(--retro-mint);
+  --peach-orange: var(--retro-peach);
+  --soft-teal: var(--retro-teal);
+  --dusty-pink: var(--retro-pink);
 
   /* Borders & Shadows */
-  --border-thick: 6px solid #000000;
-  --border-medium: 4px solid #000000;
-  --shadow-offset: 8px 8px 0 #000000;
+  --border-thick: 5px solid var(--text-black);
+  --border-medium: 3px solid var(--text-black);
+  --shadow-offset: 6px 6px 0 var(--text-black);
+  --shadow-color: 6px 6px 0 var(--retro-coral);
 
   /* Fonts */
   --font-mono: 'Space Mono', monospace;
@@ -26,7 +39,7 @@
   font-family: var(--font-mono);
   font-size: 64px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 .text-h1 {
@@ -47,7 +60,7 @@
   font-family: var(--font-sans);
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .text-small {
@@ -72,9 +85,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--font-sans);
+  overflow-x: hidden;
 }
 
-/* Background grid (subtle) */
+/* Background grid (subtle, warmer) */
 body::before {
   content: '';
   position: fixed;
@@ -83,25 +97,74 @@ body::before {
   right: 0;
   bottom: 0;
   background-image:
-    linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(rgba(255, 107, 107, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 107, 107, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
   pointer-events: none;
   z-index: -1;
 }
 
 /* Section spacing */
 section {
-  padding: 120px 24px;
+  padding: 100px 24px;
+  position: relative;
 }
 
 @media (max-width: 768px) {
   section {
-    padding: 80px 24px;
+    padding: 60px 24px;
   }
 }
 
 /* Max widths */
 .container-narrow { max-width: 720px; margin: 0 auto; }
-.container-wide { max-width: 900px; margin: 0 auto; }
-.container-full { max-width: 1280px; margin: 0 auto; }
+.container-wide { max-width: 960px; margin: 0 auto; }
+.container-full { max-width: 1200px; margin: 0 auto; }
+
+/* Decorative Elements */
+.deco-star {
+  display: inline-block;
+  font-size: 24px;
+}
+
+.deco-zigzag {
+  width: 100px;
+  height: 20px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--retro-coral) 0px,
+    var(--retro-coral) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+.deco-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid var(--text-black);
+}
+
+.deco-triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid var(--retro-yellow);
+}
+
+/* Floating shapes animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(-5deg); }
+}
+
+.float { animation: float 4s ease-in-out infinite; }
+.float-reverse { animation: float-reverse 5s ease-in-out infinite; }
+.float-slow { animation: float 6s ease-in-out infinite; }

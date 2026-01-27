@@ -142,3 +142,298 @@
 .retro-link:hover {
   background: var(--peach-orange);
 }
+
+/* ========================================
+   SECTION SYSTEM
+   Each section = one viewport, one idea
+   ======================================== */
+
+.section-full {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 24px;
+  position: relative;
+}
+
+.section-full.section-hero {
+  padding-top: 40px; /* Less top padding for hero since nav is above */
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-header h2 {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-black);
+  opacity: 0.6;
+  margin: 0 0 8px 0;
+}
+
+.section-header h3 {
+  font-family: var(--font-mono);
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.section-header .accent-bar {
+  margin: 16px auto 0 auto;
+}
+
+/* Section Break Divider */
+.section-break {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.section-break-line {
+  height: 4px;
+  width: 120px;
+  background: var(--text-black);
+}
+
+.section-break-dot {
+  width: 16px;
+  height: 16px;
+  background: var(--peach-orange);
+  border: 3px solid var(--text-black);
+  border-radius: 50%;
+  margin: 0 16px;
+}
+
+/* Navigation with Section Indicators */
+.retro-nav-indicators {
+  display: flex;
+  gap: 8px;
+  margin-left: 24px;
+}
+
+.nav-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid var(--text-black);
+  transition: all 0.3s ease;
+}
+
+.nav-indicator.active {
+  background: var(--peach-orange);
+}
+
+/* Scroll hint */
+.scroll-hint {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  animation: bounce 2s infinite;
+}
+
+.scroll-hint span {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+
+.scroll-hint-arrow {
+  font-size: 24px;
+  display: block;
+  margin-top: 8px;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-10px); }
+  60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* ========================================
+   TIMELINE SYSTEM (for FasalTech story)
+   ======================================== */
+
+.timeline-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  min-height: 100vh;
+}
+
+.timeline-visual {
+  position: sticky;
+  top: 100px;
+  height: calc(100vh - 150px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.timeline-visual-image {
+  max-width: 300px;
+  max-height: 300px;
+  margin-bottom: 32px;
+}
+
+.timeline-progress {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 24px;
+}
+
+.timeline-progress-bar {
+  height: 8px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.timeline-progress-fill {
+  height: 100%;
+  background: var(--peach-orange);
+  transition: width 0.3s ease;
+}
+
+.timeline-progress-text {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.timeline-lesson {
+  background: var(--sage-green);
+  border: 4px solid var(--text-black);
+  padding: 16px 24px;
+  max-width: 280px;
+  text-align: center;
+}
+
+.timeline-lesson p {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.timeline-content {
+  padding: 48px 0;
+}
+
+.timeline-chapter {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 24px;
+  border-left: 4px solid var(--text-black);
+  margin-left: 24px;
+  position: relative;
+}
+
+.timeline-chapter::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: var(--bg-cream);
+  border: 4px solid var(--text-black);
+  border-radius: 50%;
+}
+
+.timeline-chapter.active::before {
+  background: var(--peach-orange);
+}
+
+.timeline-chapter-number {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+.timeline-chapter-title {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+}
+
+/* Mobile Timeline */
+@media (max-width: 768px) {
+  .timeline-container {
+    display: block;
+  }
+
+  .timeline-visual {
+    position: relative;
+    top: 0;
+    height: auto;
+    padding: 48px 24px;
+  }
+
+  .timeline-chapter {
+    min-height: auto;
+    margin-left: 16px;
+    padding: 32px 16px;
+  }
+}
+
+/* ========================================
+   PROJECT CARDS (improved layout)
+   ======================================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card .window-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-links {
+  margin-top: auto;
+  padding-top: 16px;
+}

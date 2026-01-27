@@ -33,92 +33,253 @@ export default function Home() {
         <section style={{ paddingTop: '80px', paddingBottom: '120px' }}>
           <div className="container-narrow">
             <WindowCard title="ARYAN_THEPADE.exe" rotate={-1}>
-              <h1 className="text-hero">ARYAN THEPADE</h1>
-
-              <p className="text-body" style={{ marginTop: '24px', maxWidth: '600px' }}>
-                I didn&apos;t know anything about farming or coding.
-                Built $4M in 4 years anyway.
-                Now learning frontier AI the same way.
+              <p className="text-small" style={{ fontFamily: 'var(--font-mono)', marginBottom: '16px' }}>
+                MS Computer Engineering &amp; Innovation @ NYU · Graduating December 2026
               </p>
 
-              <div style={{ marginTop: '32px' }}>
-                <div style={{
-                  background: 'var(--sage-green)',
-                  border: '6px solid black',
-                  padding: '24px',
-                  transform: 'rotate(2deg)',
-                  boxShadow: '8px 8px 0 black',
-                  display: 'inline-block'
-                }}>
-                  <p style={{
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: '18px',
-                    fontWeight: 700,
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.05em',
-                    margin: 0
-                  }}>
-                    MS @ NYU · DEC 2026<br />
-                    $4M · 2000 FARMERS · ML IN PRODUCTION
-                  </p>
-                </div>
+              <h1 className="text-hero">ARYAN THEPADE</h1>
+
+              <div style={{ marginTop: '32px', borderTop: '2px solid var(--text-black)', borderBottom: '2px solid var(--text-black)', padding: '24px 0' }}>
+                <p className="text-h2" style={{ margin: 0 }}>
+                  I ship AI products that solve real business problems.
+                </p>
               </div>
 
               <div style={{ marginTop: '32px' }}>
+                <p className="text-body">
+                  <strong>Proof:</strong> Built $4M agritech business. Deployed ML in production for 2000 farmers. Coordinated 100+ stakeholders. Built 4 supply chains in 2 months across unfamiliar states.
+                </p>
+
+                <p className="text-body" style={{ marginTop: '16px' }}>
+                  <strong>Learning:</strong> Frontier AI at NYU. Transformers from scratch. RLHF. Agents. Production systems.
+                </p>
+
+                <p className="text-body" style={{ marginTop: '16px' }}>
+                  <strong>By May 2026:</strong> Can understand messy problems → build custom AI systems → coordinate stakeholders → ship to production.
+                </p>
+              </div>
+
+              <div style={{ marginTop: '32px', display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                 <RetroButton href="/resume.pdf">RESUME ↓</RetroButton>
+                <RetroButton href="mailto:aryan@aryanthepade.com" color="teal">EMAIL ME</RetroButton>
+              </div>
+
+              <div style={{ marginTop: '32px' }}>
+                <pre style={{ fontFamily: 'var(--font-mono)', fontSize: '14px', margin: 0, background: 'rgba(0,0,0,0.05)', padding: '16px', borderRadius: '4px' }}>
+{`$ cat metrics.json
+{
+  "revenue": "$4M",
+  "farmers": 2000,
+  "ml_accuracy": "72%",
+  "supply_chains": "4 states in 2 months"
+}`}
+                </pre>
               </div>
             </WindowCard>
           </div>
         </section>
 
-        {/* Proof Section */}
+        {/* Proof Section: The FasalTech Story */}
         <section>
           <div className="container-narrow">
-            <p className="text-body">
-              <strong>September 2021.</strong>
-            </p>
+            <h2 className="text-h1">THE FASALTECH STORY</h2>
+            <div className="accent-bar"></div>
 
-            <p className="text-body" style={{ marginTop: '16px' }}>
-              Lulu Hypermarket wanted 50 tons of watermelons. I said yes.
-              Then Maharashtra started flooding. My contacts couldn&apos;t deliver.
-              I&apos;d never been to Karnataka. I didn&apos;t know anyone there.
-            </p>
+            {/* The Problem */}
+            <div style={{ marginTop: '32px' }}>
+              <h3 className="text-h2">The Problem Everyone Missed</h3>
+              <p className="text-body" style={{ marginTop: '16px' }}>
+                Agriculture in India has 100+ stakeholders per transaction. Farmers, agents, middlemen, retailers, exporters. Everyone wants different things. Most tech solutions focus on ONE stakeholder and fail.
+              </p>
+              <p className="text-body" style={{ marginTop: '16px' }}>
+                I built a business by redesigning the incentive structure so everyone wins.
+              </p>
+            </div>
 
-            <p className="text-h2" style={{ margin: '32px 0', fontWeight: 700 }}>
-              I went anyway.
-            </p>
+            {/* The Muskmelon Moment */}
+            <WindowCard title="THE_MUSKMELON_MOMENT.md" colorDot="orange" rotate={1} style={{ marginTop: '48px' }}>
+              <p className="text-body"><strong>Summer 2021.</strong></p>
+              <p className="text-body" style={{ marginTop: '16px' }}>
+                I saw a farmer on TV selling muskmelons for 10x what regular farmers earned. The reporter asked why.
+              </p>
 
-            <p className="text-body">
-              Built 4 supply chains in 2 months. Across Karnataka, Andhra Pradesh,
-              Telangana, Tamil Nadu. Delivered to Lulu. Then to Reliance. Then to Namdari.
-            </p>
+              <div style={{ marginTop: '24px', padding: '16px', background: 'rgba(0,0,0,0.05)', borderLeft: '4px solid var(--peach-orange)' }}>
+                <p className="text-body" style={{ fontStyle: 'italic', margin: 0 }}>
+                  &quot;Premium crops need premium buyers. I found buyers who pay for quality. Now quality is profitable.&quot;
+                </p>
+              </div>
 
-            <WindowCard title="RESULTS.json" colorDot="teal" rotate={2} style={{ marginTop: '32px' }}>
+              <p className="text-body" style={{ marginTop: '24px' }}>
+                <strong>That&apos;s when I understood.</strong>
+              </p>
+              <p className="text-body" style={{ marginTop: '16px' }}>
+                The problem wasn&apos;t farming technology. <strong>It was economics.</strong>
+              </p>
+
+              <div style={{ marginTop: '24px', display: 'grid', gap: '16px' }}>
+                <div style={{ padding: '16px', background: 'rgba(0,0,0,0.05)', fontFamily: 'var(--font-mono)', fontSize: '14px' }}>
+                  <p style={{ margin: '0 0 8px 0', fontWeight: 700 }}>OLD_SYSTEM.json</p>
+                  <pre style={{ margin: 0 }}>{`{
+  "middlemen": "buy by volume, not quality",
+  "retailers": "want cheap, not good",
+  "farmers": "no incentive for quality"
+}
+→ Quality unprofitable`}</pre>
+                </div>
+
+                <div style={{ padding: '16px', background: 'var(--sage-green)', border: '2px solid var(--text-black)', fontFamily: 'var(--font-mono)', fontSize: '14px' }}>
+                  <p style={{ margin: '0 0 8px 0', fontWeight: 700 }}>NEW_SYSTEM.json</p>
+                  <pre style={{ margin: 0 }}>{`{
+  "farmers": "premium prices + direct access",
+  "buyers": "consistent quality",
+  "me": "coordination margin"
+}
+→ Everyone wins`}</pre>
+                </div>
+              </div>
+
+              <p className="text-body" style={{ marginTop: '24px' }}>
+                <strong>First deal:</strong> 5 tons of muskmelons to a local retailer. It worked.
+              </p>
+            </WindowCard>
+
+            {/* Seedless Watermelons */}
+            <div style={{ marginTop: '48px' }}>
+              <h3 className="text-h2">Scaling to Seedless Watermelons</h3>
+              <p className="text-body" style={{ marginTop: '16px' }}>
+                The muskmelon model proved: <strong>Premium crops + premium buyers + direct relationships = everyone wins.</strong>
+              </p>
+              <p className="text-body" style={{ marginTop: '16px' }}>
+                Seedless watermelons. India didn&apos;t have them at scale. Premium market existed but no one could supply consistently.
+              </p>
+              <p className="text-body" style={{ marginTop: '16px' }}>
+                I spent 3 months learning cultivation. Found farmers willing to experiment. Built relationships with Lulu, Reliance, Namdari.
+              </p>
+              <p className="text-body" style={{ marginTop: '16px' }}>
+                <strong>By late 2021:</strong> India&apos;s first seedless watermelon supply at commercial scale. Farmers made 3x more. We had a monopoly because no one else figured out the full system.
+              </p>
+            </div>
+
+            {/* The Do-or-Die Moment */}
+            <WindowCard title="DO_OR_DIE.log" colorDot="pink" rotate={-1} style={{ marginTop: '48px' }}>
+              <p className="text-body"><strong>September 2021.</strong> Phone rings. Lulu Hypermarket Dubai.</p>
+              <p className="text-h2" style={{ marginTop: '16px' }}>&quot;We need 50 tons of watermelons.&quot;</p>
+              <p className="text-body" style={{ marginTop: '16px' }}>I said yes.</p>
+              <p className="text-body" style={{ marginTop: '16px' }}>
+                Then Maharashtra started flooding. My farmers couldn&apos;t harvest. I had never worked in Karnataka. Didn&apos;t know anyone. Didn&apos;t speak Kannada.
+              </p>
+
+              <div style={{ marginTop: '24px', padding: '16px', background: 'rgba(0,0,0,0.05)', fontFamily: 'var(--font-mono)', fontSize: '14px' }}>
+                <pre style={{ margin: 0 }}>{`OPTIONS:
+[1] Tell Lulu I can't deliver. Lose credibility.
+[2] Go to Karnataka and figure it out.
+
+> Selected: [2]`}</pre>
+              </div>
+
+              <p className="text-body" style={{ marginTop: '24px' }}>
+                Cold called farmers. Showed up at farms. Built trust in days, not months.
+              </p>
+
+              <div style={{ marginTop: '24px', background: 'var(--sage-green)', border: '4px solid var(--text-black)', padding: '20px' }}>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: '16px', fontWeight: 700, margin: 0 }}>
+                  IN 2 MONTHS: Built 4 complete supply chains across Karnataka, Andhra Pradesh, Telangana, Tamil Nadu.
+                </p>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: '16px', fontWeight: 700, margin: '12px 0 0 0' }}>
+                  Delivered 50 tons to Lulu. On time. Consistent quality.
+                </p>
+              </div>
+
+              <p className="text-body" style={{ marginTop: '24px' }}>
+                They kept ordering. Then Reliance. Then Namdari. Then Zepto. Then Swiggy.
+              </p>
+            </WindowCard>
+
+            {/* ML Technical Challenge */}
+            <WindowCard title="ML_PRODUCTION.py" colorDot="teal" rotate={1} style={{ marginTop: '48px' }}>
+              <h3 className="text-h2">The Technical Challenge: ML at Scale</h3>
+              <p className="text-body" style={{ marginTop: '16px' }}>
+                By 2023, we had 2000+ farmers across 5 states. New problem: <strong>quality inconsistency at scale.</strong>
+              </p>
+              <p className="text-body" style={{ marginTop: '16px' }}>
+                2000 farmers = 2000 different farming practices. Visual inspection wasn&apos;t enough.
+              </p>
+
+              <div style={{ marginTop: '24px', padding: '16px', background: 'rgba(0,0,0,0.05)', fontFamily: 'var(--font-mono)', fontSize: '14px' }}>
+                <p style={{ margin: '0 0 8px 0', fontWeight: 700 }}>$ cat ml_system.json</p>
+                <pre style={{ margin: 0 }}>{`{
+  "model": "CNN disease prediction",
+  "accuracy": "72%",
+  "stack": ["TensorFlow", "Django", "AWS"],
+  "scale": "500+ images/day in peak season",
+  "users": 2000
+}`}</pre>
+              </div>
+
+              <p className="text-body" style={{ marginTop: '24px' }}>
+                <strong>The hard part wasn&apos;t the ML. It was:</strong>
+              </p>
+              <ul style={{ marginTop: '16px', marginLeft: '24px' }} className="text-body">
+                <li style={{ marginBottom: '8px' }}><strong>2G networks</strong> — Most farmers had terrible connectivity. Had to compress images without losing diagnostic quality.</li>
+                <li style={{ marginBottom: '8px' }}><strong>Low-quality cameras</strong> — Inconsistent lighting, focus, angles. Model had to work despite this.</li>
+                <li><strong>Farmer training</strong> — Many had never used AI. Made it simple: &quot;Take a photo like WhatsApp.&quot;</li>
+              </ul>
+
+              <div style={{ marginTop: '24px', padding: '16px', background: 'var(--soft-teal)', border: '4px solid var(--text-black)' }}>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: '14px', margin: 0 }}>
+                  <strong>BENCHMARK:</strong><br/>
+                  Our model: 72% accuracy<br/>
+                  Expert agronomists (from photos): 65% accuracy<br/>
+                  <br/>
+                  Our system: Available 24/7 to 2000 farmers<br/>
+                  Agronomist: Maybe 10 farm visits per day
+                </p>
+              </div>
+
+              <p className="text-body" style={{ marginTop: '24px' }}>
+                <strong>Scale changes what &quot;good enough&quot; means.</strong>
+              </p>
+            </WindowCard>
+
+            {/* Results */}
+            <WindowCard title="RESULTS.json" colorDot="green" rotate={-1} style={{ marginTop: '48px' }}>
               <pre style={{ fontFamily: 'var(--font-mono)', fontSize: '16px', margin: 0 }}>
 {`{
-  "year": "2023",
-  "metrics": {
-    "revenue": "$4M",
-    "farmers": 2000,
-    "monopoly": "seedless watermelon",
-    "ml": "production"
-  }
+  "year": "2025",
+  "revenue": "$4M",
+  "farmers": 2000,
+  "states": 5,
+  "clients": ["Lulu Dubai", "Reliance", "Namdari", "Zepto", "Swiggy"],
+  "monopoly": "seedless watermelon at commercial scale",
+  "ml_system": "deployed in production"
 }`}
               </pre>
             </WindowCard>
 
-            <p className="text-body" style={{ marginTop: '32px' }}>
-              The business worked because I saw what everyone else missed:
-              the incentive structure was broken. Farmers couldn&apos;t make money
-              on quality because the middlemen didn&apos;t care. I redesigned the system
-              so quality became profitable for everyone.
-            </p>
+            {/* AI Connection */}
+            <div style={{ marginTop: '48px' }}>
+              <h3 className="text-h2">What This Taught Me About AI</h3>
+              <p className="text-body" style={{ marginTop: '16px' }}>
+                I&apos;m now learning frontier AI—transformers, RLHF, reasoning systems, production ML. Because I see the same patterns emerging.
+              </p>
 
-            <p className="text-body" style={{ marginTop: '24px' }}>
-              AI is having the same problem right now. Powerful tools, broken incentive
-              structures, massive coordination failures. I want to build AI systems that
-              actually work for the people using them—not just demos that look good.
-            </p>
+              <WindowCard title="AI_PARALLELS.md" colorDot="pink" style={{ marginTop: '24px' }}>
+                <p className="text-body"><strong>Concrete example:</strong></p>
+                <p className="text-body" style={{ marginTop: '16px' }}>
+                  Legal AI can draft documents 10x faster. But courts have fixed capacity. When everyone files faster, the bottleneck just moves. The &quot;productivity gain&quot; becomes a coordination problem.
+                </p>
+                <p className="text-body" style={{ marginTop: '16px' }}>
+                  Same pattern I saw in agriculture: powerful tools, broken incentive structures, system-level failures that pure tech can&apos;t solve.
+                </p>
+              </WindowCard>
+
+              <p className="text-body" style={{ marginTop: '24px' }}>
+                FasalTech taught me to see misalignment before building solutions. Design for real constraints. Execute fast in chaos. Prove it works at small scale before scaling.
+              </p>
+              <p className="text-body" style={{ marginTop: '16px' }}>
+                <strong>That&apos;s what I&apos;m bringing to AI product work.</strong> Not just the ability to code, but the ability to see what breaks when systems change—and build things that work anyway.
+              </p>
+            </div>
 
             <div style={{ marginTop: '32px' }}>
               <RetroButton href="/story" color="teal">READ THE FULL STORY →</RetroButton>
@@ -219,6 +380,20 @@ Finally works. ✓
                   </a>
                 </div>
               </WindowCard>
+
+              {/* Project 3 */}
+              <WindowCard title="FASALTECH_ML.py" colorDot="green" rotate={-1}>
+                <h3 className="text-h2">FASALTECH ML SYSTEM</h3>
+                <p className="text-body" style={{ marginTop: '16px' }}>
+                  Disease prediction for 2000 farmers on 2G networks.
+                </p>
+                <p className="text-body" style={{ marginTop: '16px' }}>
+                  72% accuracy vs 65% for expert agronomists. The challenge wasn&apos;t model accuracy—it was making AI work with terrible connectivity, low-quality cameras, and farmers who&apos;d never used apps.
+                </p>
+                <p className="text-small" style={{ marginTop: '16px', fontFamily: 'var(--font-mono)' }}>
+                  TensorFlow · Django · AWS · Flutter
+                </p>
+              </WindowCard>
             </div>
           </div>
         </section>
@@ -231,17 +406,30 @@ Finally works. ✓
             </p>
 
             <WindowCard title="REQUIREMENTS.txt" colorDot="green" style={{ marginTop: '32px', textAlign: 'left' }}>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                <li className="text-body" style={{ marginBottom: '16px' }}>
-                  ⚡ Build products that ship to real users
-                </li>
-                <li className="text-body" style={{ marginBottom: '16px' }}>
-                  🚜 Work in messy 0→1 problem spaces
-                </li>
-                <li className="text-body">
-                  🤖 Move fast
-                </li>
-              </ul>
+              <div style={{ marginBottom: '20px' }}>
+                <p className="text-body" style={{ margin: 0 }}>
+                  🚀 <strong>Build products that ship to real users</strong>
+                </p>
+                <p className="text-small" style={{ margin: '4px 0 0 28px', opacity: 0.8 }}>
+                  Not demos. Not research papers. Products people actually use.
+                </p>
+              </div>
+              <div style={{ marginBottom: '20px' }}>
+                <p className="text-body" style={{ margin: 0 }}>
+                  🛠️ <strong>Work in messy 0→1 problem spaces</strong>
+                </p>
+                <p className="text-small" style={{ margin: '4px 0 0 28px', opacity: 0.8 }}>
+                  Where requirements are unclear and you have to figure it out.
+                </p>
+              </div>
+              <div>
+                <p className="text-body" style={{ margin: 0 }}>
+                  ⚡ <strong>Move fast</strong>
+                </p>
+                <p className="text-small" style={{ margin: '4px 0 0 28px', opacity: 0.8 }}>
+                  Prototype → test → iterate → ship. Weeks, not months.
+                </p>
+              </div>
             </WindowCard>
 
             <div style={{ marginTop: '48px' }}>
